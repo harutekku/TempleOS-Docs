@@ -8,10 +8,10 @@ Click Here[^1] to see the directory cmd header. It accepts default args from C++
 
 ```holyc
 Dir("*.DD.Z");
-Dir;				// If you don't have args, you don't need parenthesis.
+Dir;                // If you don't have args, you don't need parenthesis.
 ```
 
-Directories are referenced with `/` not `\`. There is a current directory, but not a path. To run a program, you typically `#include` it. There are several shortcuts for `#include`ing files. Right-click or hit `<ENTER>` on a directory listing or press `<F5>` while editing.
+Directories are referenced with `/` not '\\'. There is a current directory, but not a path. To run a program, you typically `#include` it. There are several shortcuts for `#include`ing files. Right-click or hit `<ENTER>` on a directory listing or press `<F5>` while editing.
 
 ```holyc
 Ed("NewFile.HC.Z"); // Invokes the editor. See $LK,"Doc Link Type",A="MN:LK_FILE"$.
