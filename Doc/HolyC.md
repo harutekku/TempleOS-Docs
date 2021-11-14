@@ -64,7 +64,7 @@ The `` ` `` operator raises a base to a power.
 There is no question-colon operator.
 
 ### Operators precedence
-TempleOS [operator precedence](/Compiler/CInit.HC_
+TempleOS [operator precedence](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Compiler/CInit.HC)
 ```
   `, >>, <<
   *, /, %
@@ -201,7 +201,7 @@ GrPrint(gr.dc, (GR_WIDTH - 10 * FONT_WIDTH) >> 1, (GR_HEIGHT - FONT_HEIGHT) >> 1
 
 No typedef, use class.
 
-class member vars can have meta data. format and data are two meta data types now used. All compiler structures are saved and you can access the compiler's info about classes and vars.  See [ClassMeta.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/ClassMeta.HC) and  `DocForm()`.
+class member vars can have meta data. format and data are two meta data types now used. All compiler structures are saved and you can access the compiler's info about classes and vars. See [ClassMeta.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/ClassMeta.HC) and  `DocForm()`.
 
 There is a keyword lastclass you use as a dft arg. It is set to the class name of the prev arg. See [LastClass.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/LastClass.HC), `ClassRep()`, `DocForm()` and [BlkDevRep.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Dsk/BlkDevRep.HC).
 
