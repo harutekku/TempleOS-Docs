@@ -19,7 +19,7 @@
   - Auto-completion, jump-to-source tool called AutoComplete with Dictionary.
   - Window Manager. Pan scrn with `<CTRL-LeftDrag>`. Zoom scrn on mouse cursor with `<CTRL-ALT-z>` / `<CTRL-ALT-SHIFT-Z>`.
   - File Manager, `<CTRL-d>`.
-  - Code profiler[^2], `merge`[^3], `diff`[^4] utils.
+  - Code profiler[^2], merge[^3], diff[^4] utils.
   - PC Speaker support with many hymns.
   - Music composing tool.
   - Many games, [Demos](./DemoIndex.md) and [Documentation](./HelpIndex.md).
