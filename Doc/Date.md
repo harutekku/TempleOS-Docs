@@ -1,0 +1,2 @@
+# Dates
+Dates are 32-bit signed ints representing the number of days since the birth of Christ. Negative values represent B.C.E. dates.
