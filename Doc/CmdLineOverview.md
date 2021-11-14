@@ -4,7 +4,7 @@ The cmd line feeds into the [HolyC](./HolyC.md) compiler line-by-line as you typ
 
 Look-up the function headers with AutoComplete by hitting `<CTRL-SHIFT-F1>` after typing the first few letters.
 
-Click Here[^1] to see the directory cmd header. It accepts default args from C++.
+Click here[^1] to see the directory cmd header. It accepts default args from C++.
 
 ```holyc
 Dir("*.DD.Z");
