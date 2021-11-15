@@ -46,10 +46,10 @@ The term [JIT Compile Mode](./Glossary.md) means it compiles and executes code p
 Files with names ending in `.Z` are individually compressed using [TempleOS Compression](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Kernel/Compress.HC). They are not encrypted. `Copy()` or rename them with `Move()` to a name without `.Z` and they will be stored in an uncompressed form. See [TOSZ](./TOSZ.md) for Linux or Windows uncompress C/C++ code.
 
 ## Is it open source? How do I build it?
-TempleOS is 100% open src. All the src code is included in the distro. Use `BootHDIns()` to compile the kernel and compiler. The rest is [JIT Compiled](./Glossary.md) during boot. See `/StartOS.HC`. 
+TempleOS is 100% open src. All the src code is included in the distro. Use `BootHDIns()` to compile the kernel and compiler. The rest is [JIT Compiled](./Glossary.md) during boot. See [StartOS.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/StartOS.HC). 
 
 ## Where are object files? How do I link?
-TempleOS does not use object files or a linker. [AOT Compile Mode](./Glossary.md) is used to directly create flat binary files, [/Kernel.BIN.C](/Kernel/Kernel.PRJ) and [/Compiler/Compiler.BIN](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Compiler/Compiler.PRJ) with no object files and linking. [JIT Compile Mode](./Glossary.md) place code in memory, ready to run, with no object files or linking. Linking is done when BIN modules are `Load()`ed.
+TempleOS does not use object files or a linker. [AOT Compile Mode](./Glossary.md) is used to directly create flat binary files, [Kernel.BIN.C](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Kernel/Kernel.PRJ) and [Compiler.BIN](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Compiler/Compiler.PRJ) with no object files and linking. [JIT Compile Mode](./Glossary.md) place code in memory, ready to run, with no object files or linking. Linking is done when BIN modules are `Load()`ed.
 
 ## What is the FPS refresh rate?
 The refresh rate is "(30000.0/1001) frames-per-second. That is how often TempleOS updates scrn mem. It is not syncronized to the hardware.
@@ -82,7 +82,7 @@ The stack does not grow, so do not do deep recursion. In theory, memory gets fra
 There is no PATH. You do not enter filenames at the command-line and expect them to run. You enter C-like code. [Get Started Here](./CmdLineOverview.md).
 
 ## How do I boot it with Grub?
-If you use Grub, you chain-load like Windows. See [Boot](./Boot.md). You can use the TempleOS boot-loader. [Master-Boot-Loader-Stage1](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootMHD.HC), [Master-Boot-Loader-Stage2](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootMHD2.HC), [Partition-Boot-Loader](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootHD.HC), [CD-DVD-Boot-Loader](/Adam/Opt/Boot/BootDVD.HC).
+If you use Grub, you chain-load like Windows. See [Boot](./Boot.md). You can use the TempleOS boot-loader. [Master-Boot-Loader-Stage1](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootMHD.HC), [Master-Boot-Loader-Stage2](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootMHD2.HC), [Partition-Boot-Loader](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootHD.HC), [CD-DVD-Boot-Loader](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootDVD.HC).
 
 ## How do I get Kernel.BIN to boot?
 The boot-loaders must be patched by you running `BootHDIns()` or `BootMHDIns()`. Those will write the block address into the boot-loader because the boot-loaders do not navigate file systems to find the [Stage2](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Kernel/KStart16.HC) if you relocate it.
@@ -124,7 +124,7 @@ Binary sprite data is stored beyond the terminating NULL in text files. Map file
 Sprites can be stored as vector graphics so they might take shockingly little room. They can be converted to bitmaps.
 
 ## Why don't I need to recompile `/Adam` and `/Home` files?
-If you change code in the `/Adam` or your `/Home` directory, you don't need to recompile, you just need to reboot because those directories get recompiled when you boot. It uses [JIT Compile Mode](./Glossary.md). There is no `.BIN` file for JIT compilation. See `/StartOS.HC`.
+If you change code in the `/Adam` or your `/Home` directory, you don't need to recompile, you just need to reboot because those directories get recompiled when you boot. It uses [JIT Compile Mode](./Glossary.md). There is no `.BIN` file for JIT compilation. See [StartOS.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/StartOS.HC).
 
 ## Why does it finds files that aren't there?
 If not found, `.Z` is added or removed from filename and a search is done again. If a file is still not found, the parent directories are searched for a file of the same name.

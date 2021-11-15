@@ -75,7 +75,7 @@ Use `<CTRL-ALT-f>` to toggle between [Std Font](https://github.com/cia-foundatio
 
 Use `<CTRL-ALT-s>` will capture the scrn as a sprite on the clip. You can save the cmd line doc as text with `<CTRL-a>`.
 
-You can save a sprite as a .GR file in `<CTRL-r>` on the Sprite BitMap Menu.
+You can save a sprite as a `.GR` file in `<CTRL-r>` on the Sprite BitMap Menu.
 
 You can eye-dropper colors in the `<CTRL-r>` sprite editor by pressing `c`. Press `t` for transparent.
 
@@ -133,7 +133,7 @@ Use `HeapLog()`, `HeapLogAddrRep()` and `HeapLogSizeRep()` to find leaks. Don't 
 
 For advanced heap debugging, play with `_CFG_HEAP_DBG`[^13]. You're on your own.
 
-You can use `Type()` to display .GR files.
+You can use `Type()` to display `.GR` files.
 
 Use `Man()` to jump to short sym name src code.
 

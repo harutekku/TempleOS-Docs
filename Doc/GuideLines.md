@@ -75,7 +75,7 @@ In-order, short circuit logic is assumed.
 
 Avoid boolean expression assignments. Boolean assignments don't have short circuit logic and are not compiled efficiently. The Bool type is just an alias for a 1 byte signed int -- nothing forces it to 1 or 0. There is a `ToBool()` function that will for to 1 ot 0, however.
 
-Glbl vars in AOT BIN modules are initialized to zero. They occupy space in BIN files.
+Glbl vars in AOT BIN modules are initialized to zero. They occupy space in `.BIN` files.
 
 Bracketing code with PUSHFD CLI and POPFD will protect against simultaneous accesses from tasks on *one* core. To protect against multiple cores, you need a locked semaphore. I think semiphores need to be in their own cache line, but I'm not sure. I use lock bits in a lot of places not aligned.
 

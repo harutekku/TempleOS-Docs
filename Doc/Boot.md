@@ -12,14 +12,14 @@ All the boot related code for TempleOS is in the [Boot](https://github.com/cia-f
 
 ### CD/DVD boot sector
 - [BootDVD.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootDVD.HC) - CD/DVD boot sector.
-- [BootDVDIns.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootDVDIns.HC) - Prep for CD/DVD install by creating [/0000Boot/0000Kernel.BIN.C](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/0000Boot/0000Kernel.BIN.C).
+- [BootDVDIns.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootDVDIns.HC) - Prep for CD/DVD install by creating [0000Kernel.BIN.C](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/0000Boot/0000Kernel.BIN.C).
 If you are curious about CD/DVDs, see [DskISORedSea.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/DskISORedSea.HC). To make a custom bootable CD/DVD, look [here](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Misc/DoDistro.HC).
 
 ### Master boot loaders
 - [BootMHD.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootMHD.HC) - Stage 1 Master HD boot loader.
 - [BootMHD2.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootMHD2.HC) - Stage 2 Master HD boot loader.
 - [BootMHDIns.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootMHDIns.HC) - Installs Master HD boot loader.
-BootMHD goes on block zero. `/0000Boot/BootMHD2.BIN.C` is stored as a file in a partition, risky and unusual, since most master boot loaders place stage 2 in a gap that's not in any partition. BootMHD2 displays a menu and boots a partition.
+BootMHD goes on block zero. `BootMHD2.BIN.C` is stored as a file in a partition, risky and unusual, since most master boot loaders place stage 2 in a gap that's not in any partition. BootMHD2 displays a menu and boots a partition.
 
 ### Partition boot records
 - [BootHD.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/BootHD.HC) - HD partition boot record.
@@ -27,8 +27,8 @@ BootMHD goes on block zero. `/0000Boot/BootMHD2.BIN.C` is stored as a file in a 
 BootHD is the boot record for a TempleOS partition. Each partition has its own partition boot record, the first block of the partition.
 
 ## Other info
-My boot records don't access directories because that would make them too big for one block and would make them depend on a file system layout. Instead, they get patched with the LBA, logical block addresses, to load files. To update with a new TempleOS kernel, you must create a `/Kernel.BIN.C`, `/Kernel/Kernel.PRJ` binary file and patch the boot loader so it knows the LBA blocks to load. Therefore, you usually recompile the kernel and update the boot sector at the same time with `BootHDIns()`, `BootMHDIns()` will install a master boot loader.
+My boot records don't access directories because that would make them too big for one block and would make them depend on a file system layout. Instead, they get patched with the LBA, logical block addresses, to load files. To update with a new TempleOS kernel, you must create a `Kernel.BIN.C`, `Kernel.PRJ` binary file and patch the boot loader so it knows the LBA blocks to load. Therefore, you usually recompile the kernel and update the boot sector at the same time with `BootHDIns()`, `BootMHDIns()` will install a master boot loader.
 
-With TempleOS, `/Kernel.BIN.C` and `/Kernel/Kernel.PRJ` loads `/Compiler/Compiler.BIN` and `/Compiler/Compiler.PRJ` so it can work with source code from then on. It compiles start-up scripts beginning with `/StartOS.HC` into the [Adam Task](./Glossary.md)'s memory including the code in the `/Adam` and `/Home` directories.
+With TempleOS, `Kernel.BIN.C` and `Kernel.PRJ` loads `Compiler.BIN` and `Compiler.PRJ` so it can work with source code from then on. It compiles start-up scripts beginning with `StartOS.HC` into the [Adam Task](./Glossary.md)'s memory including the code in the `/Adam` and `/Home` directories.
 
-It is possible to do a fast reboot without doing a hardware reset. You might do this when working on `/Kernel.BIN.C` and `/Kernel/Kernel.PRJ` or your start-up scripts when you want to compile them effect. See `BootRAM()`.
+It is possible to do a fast reboot without doing a hardware reset. You might do this when working on `Kernel.BIN.C` and `Kernel.PRJ` or your start-up scripts when you want to compile them effect. See `BootRAM()`.
