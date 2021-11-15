@@ -15,53 +15,53 @@ Simplicity is a goal to [keep the line count down](./Strategy.md), so it's easy 
 It's a kayak, not a Titanic -- it will crash if you do something wrong. You quickly reboot, however. DOS and the 8-bit home computers of the 80's worked fine without memory protection and most computers in the world -- the embedded ones -- operate without protection. The resulting simplicity of no protections is why TempleOS has value. In facts, that's the point of TempleOS. See the [TempleOS Charter](./Charter.md).
 
 Conventional thinking is "failure is not an option" for general purpose operating systems. Since this OS is used in addition to Windows or Linux, however, failure is an option -- just use Windows or Linux if you can't do something. I cherry-pick what it will and won't do, to make it maximally beautiful. The following applications more or less form a basis that spans the range of use that TempleOS is intended for:
-  - [BattleLines.HC](/Demo/Games/BattleLines.HC)
-  - [BigGuns.HC](/Demo/Games/BigGuns.HC)
-  - [BlackDiamond.HC](/Demo/Games/BlackDiamond.HC)
-  - [BomberGolf.HC](/Demo/Games/BomberGolf.HC)
-  - [CastleFrankenstein.HC](/Demo/Games/CastleFrankenstein.HC)
-  - [CharDemo.HC](/Demo/Games/CharDemo.HC)
-  - [CircleTrace.HC](/Demo/Games/CircleTrace.HC)
-  - [Collision.HC](/Demo/Games/Collision.HC)
-  - [Digits.HC](/Demo/Games/Digits.HC)
-  - [DunGen.HC](/Demo/Games/DunGen.HC)
-  - [Talons.HC](/Demo/Games/Talons.HC)
-  - [ElephantWalk.HC](/Demo/Games/ElephantWalk.HC)
-  - [FlapBat.HC](/Demo/Games/FlapBat.HC)
-  - [FlatTops.HC](/Demo/Games/FlatTops.HC)
-  - [Halogen.HC](/Demo/Games/Halogen.HC)
-  - [MassSpring.HC](/Demo/Games/MassSpring.HC)
-  - [Maze.HC](/Demo/Games/Maze.HC)
-  - [RainDrops.HC](/Demo/Games/RainDrops.HC)
-  - [RawHide.HC](/Demo/Games/RawHide.HC)
-  - [Rocket.HC](/Demo/Games/Rocket.HC)
-  - [RocketScience.HC](/Demo/Games/RocketScience.HC)
-  - [Squirt.HC](/Demo/Games/Squirt.HC)
-  - [TheDead.HC](/Demo/Games/TheDead.HC)
-  - [TicTacToe.HC](/Demo/Games/TicTacToe.HC)
-  - [TreeCheckers.HC](/Demo/Games/TreeCheckers.HC)
-  - [Varoom.HC](/Demo/Games/Varoom.HC)
-  - [Wenceslas.HC](/Demo/Games/Wenceslas.HC)
-  - [Whap.HC](/Demo/Games/Whap.HC)
-  - [Zing.HC](/Demo/Games/Zing.HC)
-  - [ZoneOut.HC](/Demo/Games/ZoneOut.HC)
-  - [childish.HC](/Apps/Psalmody/Examples/childish.HC)
-  - [night.HC](/Apps/Psalmody/Examples/night.HC)
-  - [prosper.HC](/Apps/Psalmody/Examples/prosper.HC)
+  - [BattleLines.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/BattleLines.HC)
+  - [BigGuns.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/BigGuns.HC)
+  - [BlackDiamond.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/BlackDiamond.HC)
+  - [BomberGolf.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/BomberGolf.HC)
+  - [CastleFrankenstein.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/CastleFrankenstein.HC)
+  - [CharDemo.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/CharDemo.HC)
+  - [CircleTrace.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/CircleTrace.HC)
+  - [Collision.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/Collision.HC)
+  - [Digits.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/Digits.HC)
+  - [DunGen.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/DunGen.HC)
+  - [Talons.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/Talons.HC)
+  - [ElephantWalk.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/ElephantWalk.HC)
+  - [FlapBat.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/FlapBat.HC)
+  - [FlatTops.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/FlatTops.HC)
+  - [Halogen.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/Halogen.HC)
+  - [MassSpring.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/MassSpring.HC)
+  - [Maze.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/Maze.HC)
+  - [RainDrops.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/RainDrops.HC)
+  - [RawHide.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/RawHide.HC)
+  - [Rocket.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/Rocket.HC)
+  - [RocketScience.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/RocketScience.HC)
+  - [Squirt.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/Squirt.HC)
+  - [TheDead.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/TheDead.HC)
+  - [TicTacToe.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/TicTacToe.HC)
+  - [TreeCheckers.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/TreeCheckers.HC)
+  - [Varoom.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/Varoom.HC)
+  - [Wenceslas.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/Wenceslas.HC)
+  - [Whap.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/Whap.HC)
+  - [Zing.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/Zing.HC)
+  - [ZoneOut.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Games/ZoneOut.HC)
+  - [childish.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Apps/Psalmody/Examples/childish.HC)
+  - [night.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Apps/Psalmody/Examples/night.HC)
+  - [prosper.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Apps/Psalmody/Examples/prosper.HC)
 
 ## Technical topics
 Two things to know about TempleOS are that tasks have `MAlloc()` and `Free()` heap memory, not applications, and tasks have compiler symbol tables that persist at a scope like environment variables in other operating systems, and the symbols can include functions.
 
 For other operating systems, I hated learning one language for command line scripts and another for programming. With TempleOS, the command line feeds right into the [HolyC](./HolyC.md) compiler, line by line, and it places code into memory it `MAlloc()`s. The compiler is paused at the command line, waiting for input. Naturally, you `#include` a program to load it into memory and, usually, start it.
 
-During the boot process, many files get [compiled](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/StartOS.HC) before you have access to the command line. (Don't worry, booting takes only two seconds.) All the header declarations for the operating system are compiled and are available for use in your programs without needing to `#include` them. Everything is truly compiled to native [x86_64](http://en.wikipedia.org/wiki/Amd64#AMD64") machine code, **nothing is interpreted** and there is **no byte code**.
+During the boot process, many files get [compiled](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/StartOS.HC) before you have access to the command line. (Don't worry, booting takes only two seconds.) All the header declarations for the operating system are compiled and are available for use in your programs without needing to `#include` them. Everything is truly compiled to native [x86_64](http://en.wikipedia.org/wiki/Amd64#AMD64) machine code, **nothing is interpreted** and there is **no byte code**.
 
 Statements at the global scope -- outside the scope of functions -- execute immediately. There is no `main()` function. Instead, you give meaningful names to what would be `main()` functions and you invoke them by calling them with a statement in the global scope, usually at the bottom of your file.
 
 I started with C syntax, but didn't like the command line for a directory listing looking like this:
 
 ```c
-Dir("*.*",FALSE);
+Dir("\*.\*",FALSE);
 ```
 So, I added default args from C++ and it looked like this:
 ```cpp

@@ -101,7 +101,7 @@ for (i = 0; i < 20; i++)
   }
 ```
 
-### `sub_switch` statement
+### sub_switch statement
 Switch statements can be nestled with a single switch expression! This is known as a "sub_switch" statement. `start` `end` are used to group cases. Don't goto out of, throw an exception out of, or return out of the start front porch area. See [SubSwitch.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/SubSwitch.HC).
 
 ```holyc
@@ -197,7 +197,7 @@ GrPrint(gr.dc, (GR_WIDTH - 10 * FONT_WIDTH) >> 1, (GR_HEIGHT - FONT_HEIGHT) >> 1
 ### Function flags
 `interrupt`, `haserrcode`, `public`, `argpop` or `noargpop` are function flags. See `IRQKbd()`.
 
-## `struct`s, `class`es and `union`s
+## `class`es and `union`s
 
 No typedef, use class.
 

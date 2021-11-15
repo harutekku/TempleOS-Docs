@@ -4,6 +4,7 @@
     - HolyC functions, i.e `Spawn()`
     - Keyboard shortcuts, i.e `<CTRL-l>`
     - File names, i.e `DoOnce.HC`
+    - File extensions, i.e `.HC`
     - Internal TempleOS programs, i.e `Adam`
     - Function argument values, i.e `"+r"`
   - All HolyC code should be enclosed in triple `

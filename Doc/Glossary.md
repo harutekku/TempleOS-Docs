@@ -183,7 +183,7 @@ Often a task will `Spawn()` or `PopUp()` a task as a helper. The helper is known
 ## AOT Compile Mode
 Ahead-of-Time compiling is conventional compilation mode. Do not use AOT, use JIT compiling.
 
-In AOT mode, .PRJ files are compiled to .BIN files, skipping .OBJ files. After compiling, .BIN files are `Load()`ed.
+In AOT mode, `.PRJ` files are compiled to `.BIN` files, skipping `.OBJ` files. After compiling, `.BIN` files are `Load()`ed.
 
 There is no `main()` routine. Instead, stmts outside functions are automatically executed upon loading. There is no way to unload except by killing the task. To invoke AOT Compiled Mode, `Cmp()` is used.  The Kernel module and compiler are made in AOT compiled mode. See `BootHDIns()`  which calls `MakeAll()` where `/Kernel.BIN.C`, `/Kernel/Kernel.PRJ` and `/Compiler/Compiler.BIN`, `/Compiler/Compiler.PRJ` are created.
 

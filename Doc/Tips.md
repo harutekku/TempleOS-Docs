@@ -23,9 +23,9 @@ You can use ans in cmd line expressions. It holds the res the last cmd line oper
 
 Use the PullDown menu at the top of the scrn to learn commands, or for finding the keyboard controls to games.
 
-You can adjust the mouse movement rate by setting global vars in your start-up file. See mouse scale[^2].
+You can adjust the mouse movement rate by setting global vars in your start-up file. See [mouse scale](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/HomeLocalize.HC).
 
-You can set your local time zone by setting the `local_time_offset`[^3] global var in a start-up file. It's units are `CDATE_FREQ`[^4]. See local time[^2].
+You can set your local time zone by setting the `local_time_offset`[^2] global var in a start-up file. It's units are `CDATE_FREQ`[^3]. See [local time](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/HomeLocalize.HC).
 
 `<CTRL-SHIFT-L>` in the editor to reindent a [HolyC](./HolyC.md) function or renumber an asm routine's local labels.
 
@@ -41,13 +41,13 @@ Boolean expressions not in if stmts don't have short circuit logic and are compi
 
 You can use `progress1 - progress4` in your programs for whatever you like. They're just global vars that are shown on the wallpaper. The original intent was to indicate how far along operations were. There's no coordination, so different apps might interfere. I use them most for debugging--just values easily viewed. See [Progres.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Progress.HC).
 
-Use `DocMax()` to adjust the size of the cmd line buf. It counts `CDoc`[^5] entries, not lines.
+Use `DocMax()` to adjust the size of the cmd line buf. It counts `CDoc`[^4] entries, not lines.
 
-Many data structures have a user_data member. Those are available for you to store a data item, for convenience. `CTask`[^6], `CDocEntry`[^7] and `CDirEntry`[^8] have them. You shouldn't encounter conflicts with TempleOS using them.
+Many data structures have a user_data member. Those are available for you to store a data item, for convenience. `CTask`[^5], `CDocEntry`[^6] and `CDirEntry`[^7] have them. You shouldn't encounter conflicts with TempleOS using them.
 
-If, for some strange reason, you wanted to reduce mem usage, make a smaller disk cache when you recompile the kernel; disabling AutoComplete; Specify smaller stk sizes when doing `Spawn()`, chang `MEM_DFT_STK`[^9], and using `DocMax()` to reduce the cmd line buffer size.
+If, for some strange reason, you wanted to reduce mem usage, make a smaller disk cache when you recompile the kernel; disabling AutoComplete; Specify smaller stk sizes when doing `Spawn()`, chang `MEM_DFT_STK`[^8], and using `DocMax()` to reduce the cmd line buffer size.
 
-Filenames ending in ".Z" will be automatically compressed and uncompressed when read or written. The compression method is not supported by other operating systems. You can store files uncompressed by `Move()`ing them to a filename not ending in ".Z". See [TOSZ](./TOSZ.md) if you want to uncompress while in Linux.
+Filenames ending in `.Z` will be automatically compressed and uncompressed when read or written. The compression method is not supported by other operating systems. You can store files uncompressed by `Move()`ing them to a filename not ending in `.Z`. See [TOSZ](./TOSZ.md) if you want to uncompress while in Linux.
 
 `Merge()` can be used to see what's changed. The `+d` flag will show differences of files which have changed and allow you to merge code. (The `+r` flag will recurse.)
 
@@ -65,7 +65,7 @@ Use `Silent()` to disable scrn text output.
 
 Grab-scroll any window at any time with `CTRL-LEFT-MOUSE-DRAG`. Null grab-scrolling with `CTRL-RIGHT-MOUSE`.
 
-Use `<CTRL-ALT-z>` to zoom-in and `<CTRL-ALT-SHIFT-Z>` to zoom-out. You can scroll by moving to the edge of the window. Set `gr.continuous_scroll`[^10] to TRUE if you want. 
+Use `<CTRL-ALT-z>` to zoom-in and `<CTRL-ALT-SHIFT-Z>` to zoom-out. You can scroll by moving to the edge of the window. Set `gr.continuous_scroll`[^9] to TRUE if you want. 
 
 Use `<CTRL-ALT-g>` and `<CTRL-ALT-SHIFT-G>` to display a grid on the scrn.
 
@@ -93,11 +93,11 @@ If you output to the cmd line and wish to allow users to scroll around and view 
 
 Use `View()` in Pop-up macros to linger until the user presses `<ESC>` or `<SHIFT-ESC>`.
 
-You can access the word under the cursor at `ac.cur_word`[^11].
+You can access the word under the cursor at `ac.cur_word`[^10].
 
 You can reactivate AutoComplete after closing it by pressing `<CTRL-Fun Key>` or `<ALT-w>` if you have it defined.
 
-`<CTRL-SHIFT-T>` to toggle to/from plain text just the `CDoc`[^5] cmd under the cursor. See [TextDemo.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/DolDoc/TextDemo.HC).
+`<CTRL-SHIFT-T>` to toggle to/from plain text just the `CDoc`[^4] cmd under the cursor. See [TextDemo.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/DolDoc/TextDemo.HC).
 
 If you toggle to plain text when you are working with graphics in a document, you can add duplicate entries for sprites by entering a `$SP...$` cmd with the same num.
 
@@ -127,11 +127,11 @@ Study [MemRep.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f8
 
 The editor's sel-text mechanism allows for disjoint portions of sel text. This is a feature, not a bug -- you can cut-and-paste disjoint text.
 
-`cnts.time_stamp_freq`[^12] is continuously calibrated. Be careful because expressions might decrease. Take a snap-shot, like this: `timeout = GetTSC + cnts.time_stamp_freq * seconds;` and compare against `GetTSC()`. I recommend just using `tS`[^13] or `cnts.jiffies`[^12].
+`cnts.time_stamp_freq`[^11] is continuously calibrated. Be careful because expressions might decrease. Take a snap-shot, like this: `timeout = GetTSC + cnts.time_stamp_freq * seconds;` and compare against `GetTSC()`. I recommend just using `tS`[^12] or `cnts.jiffies`[^11].
 
-Use `HeapLog()`, `HeapLogAddrRep()` and `HeapLogSizeRep()` to find leaks. Don't be confused by `CDoc`[^5] allocations. Those are generated when text is written to the cmd line buffer.
+Use `HeapLog()`, `HeapLogAddrRep()` and `HeapLogSizeRep()` to find leaks. Don't be confused by `CDoc`[^4] allocations. Those are generated when text is written to the cmd line buffer.
 
-For advanced heap debugging, play with `_CFG_HEAP_DBG`[^14]. You're on your own.
+For advanced heap debugging, play with `_CFG_HEAP_DBG`[^13]. You're on your own.
 
 You can use `Type()` to display .GR files.
 
@@ -141,7 +141,7 @@ Use `Fix()` to edit and fix the last compiler err.
 
 You can use `<CTRL-SHIFT-L>` to do a check for compile errors.
 
-You can use `DocOpt()` to optimize links. (Mostly just removes .Z)
+You can use `DocOpt()` to optimize links. (Mostly just removes `.Z`)
 
 `ZipRep"$()` can highlight src files with lots of redundancy.
 
@@ -154,28 +154,26 @@ The first line of the [Psalmody](https://github.com/cia-foundation/TempleOS/blob
 
 [^1]: See HI:Keyboard Devices/System
 
-[^2]: See FF:~/HomeLocalize.HC
+[^2]: See MN:local_time_offset
 
-[^3]: See MN:local_time_offset
+[^3]: See MN:CDATE_FREQ
 
-[^4]: See MN:CDATE_FREQ
+[^4]: See MN:CDoc
 
-[^5]: See MN:CDoc
+[^5]: See MN:CTask
 
-[^6]: See MN:CTask
+[^6]: See MN:CDocEntry
 
-[^7]: See MN:CDocEntry
+[^7]: See MN:CDirEntry
 
-[^8]: See MN:CDirEntry
+[^8]: See MN:MEM_DFT_STK
 
-[^9]: See MN:MEM_DFT_STK
+[^9]: See MN:CGrGlbls
 
-[^10]: See MN:CGrGlbls
+[^10]: See MN:CAutoCompleteGlbls
 
-[^11]: See MN:CAutoCompleteGlbls
+[^11]: See MN:CCntsGlbls
 
-[^12]: See MN:CCntsGlbls
+[^12]: See MN:tS
 
-[^13]: See MN:tS
-
-[^14]: See MN:\_CFG_HEAP_DBG
+[^13]: See MN:\_CFG_HEAP_DBG

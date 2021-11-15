@@ -1,5 +1,5 @@
 # AutoComplete
-AutoComplete is the window on the right of the scrn. `ACInit()` collects words from all text files in subdirectories. Normally, the call to `ACInit()` is in `HomeSys.HC`[^1]. It provides auto-complete for typing, jump-to-code and jump-to-dictionary functionality.
+AutoComplete is the window on the right of the scrn. `ACInit()` collects words from all text files in subdirectories. Normally, the call to `ACInit()` is in [HomeSys.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/HomeSys.HC). It provides auto-complete for typing, jump-to-code and jump-to-dictionary functionality.
 
 ## Comamnds
 - `<ALT-SHIFT-A>`	Closes the AutoComplete window.
@@ -18,5 +18,3 @@ AutoComplete is the window on the right of the scrn. `ACInit()` collects words f
 - `<CTRL-n>`	Autocompletes the n-th dictionary word in the window.
 
 If you have the raw Project Gutenberg dictionary file, you can generate the TempleOS processed dictionary files with the stand-alone program [ACDictGen](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/AutoComplete/ACDictGen.HC)
-
-[^1]: See FF:~/HomeSys.HC,ACInit

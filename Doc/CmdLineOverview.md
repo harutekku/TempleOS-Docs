@@ -14,10 +14,10 @@ Dir;                // If you don't have args, you don't need parenthesis.
 Directories are referenced with `/` not '\\'. There is a current directory, but not a path. To run a program, you typically `#include` it. There are several shortcuts for `#include`ing files. Right-click or hit `<ENTER>` on a directory listing or press `<F5>` while editing.
 
 ```holyc
-Ed("NewFile.HC.Z"); // Invokes the editor. See $LK,"Doc Link Type",A="MN:LK_FILE"$.
+Ed("NewFile.HC.Z"); // Invokes the editor. See Doc Link Type (LK_FILE).
 ```
 
-Most filenames end in .Z because they are stored compressed.
+Most filenames end in `.Z` because they are stored compressed.
 
 Drives are specified with a letter. The boot drive is specified with a `:`. The home dir drive is specified with a `~`.
 
@@ -38,9 +38,9 @@ The home directory is specified with a `~`.
 Cd("~/Psalmody");   // See /Home dir in ./GuideLines.md.
 ```
 
-If a file is not found, .Z is added or removed and a search is done, again. If a file is still not found, all parent directories are searched.
+If a file is not found, `.Z` is added or removed and a search is done, again. If a file is still not found, all parent directories are searched.
 
-You can place macros in your PersonalMenu[^2] for `Cd()` commands. `<CTRL-m>` to access your menu.
+You can place macros in your [PersonalMenu.DD](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/PersonalMenu.DD) for `Cd()` commands. `<CTRL-m>` to access your menu.
 
 ```holyc
 Find("needle", "/Demo/*.HC.Z;*.DD.Z;")  // See File Utils in ./FileUtils.md.
@@ -50,7 +50,5 @@ Cmd Line Routines[^3]
 
 [^1]: See MN:Dir
 
-[^2]: See FI:~/PersonalMenu.DD
-
-[^3]: See HI:Cmd Line (Typically)
+[^2]: See HI:Cmd Line (Typically)
 

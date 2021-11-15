@@ -53,7 +53,7 @@ Virtual mem/Paging is not used -- it is identity mapped in x86_64 mode. The stk 
 
 You can `Free(NULL)`.
 
-See [Naming Convention](./Glossary.md) and [Abbreviations](/Glossary.md).
+See [Naming Convention](./Glossary.md) and [Abbreviations](./Glossary.md).
 
 There are two modes of compiling, [AOT Compile Mode](./Glossary.md) and [JIT Compile Mode](./Glossary.md). Compilation is done in both -- neither is "interpreted". Use [JIT Mode](./Glossary.md).
 

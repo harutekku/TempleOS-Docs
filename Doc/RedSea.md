@@ -36,7 +36,7 @@ public class CRedSeaBoot {       //RedSea is type FAT32 in partition table to fo
 ```
 See [FileSysRedSea.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Kernel/BlkDev/FileSysRedSea.HC) and [DskISORedSea.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/Opt/Boot/DskISORedSea.HC).
 
-Files with names ending in .Z are compressed. See [Compress.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Kernel/Compress.HC).
+Files with names ending in `.Z` are compressed. See [Compress.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Kernel/Compress.HC).
 
 To replace ISO9660, make hard-drive partition image of a measured size and copy onto a CD/DVD starting at about sector 20, with EL TORITO booting. 512-byte sectors will be placed on top of 2048-byte CD/DCD sectors, so there will be four blocks per CD/DVD sector.
 

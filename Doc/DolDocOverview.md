@@ -151,7 +151,7 @@ The space after the first ':' in the format string marks the first valid cursor 
 ### Check box
 `CB` - Check Box
 
-Used for forms.  Use `<CTRL-l>` to help you generate the DolDoc command text you need in your [HolyC](./HolyC.DD) `class` member's `format` meta-data for `DocForm()`. See [Form.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/DolDoc/Form.HC) and `CEdFindText`[^6].
+Used for forms.  Use `<CTRL-l>` to help you generate the DolDoc command text you need in your [HolyC](./HolyC.md) `class` member's `format` meta-data for `DocForm()`. See [Form.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/DolDoc/Form.HC) and `CEdFindText`[^6].
 
 If you are not using `DocForm()` make a `$CB...$` statement with `DocPrint()` and fill-in the `Fs->data` addr. See [task_title](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Adam/DolDoc/DocEd.HC).   
 
@@ -228,7 +228,7 @@ A left macro arg, `LM=""`, will send text when the left mouse is clicked.
 
 A left in string, `+LIS`, flag will cause text to be sent to `InStr()` instead of `In()`. An InStr runs code. Literal text is in quotes and messages are sent with `Msg()`. See [InFile](https://github.com/cia-foundation/TempleOS/tree/archive/Demo/InFile).
 
-Macro's are usually in your `~/PersonalMenu.DD` and have the `+X` flag set by default. Adding `-X` prevents the usual `<ESC>` from being sent (which exits the PersonalMenu scrn). Note: When you click a macro on the cmd line, it will go to the bottom and execute unless you cancel the `<ESC>` with a `-X`.
+Macro's are usually in your [PersonalMenu.DD](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/PersonalMenu.DD) and have the `+X` flag set by default. Adding `-X` prevents the usual `<ESC>` from being sent (which exits the PersonalMenu scrn). Note: When you click a macro on the cmd line, it will go to the bottom and execute unless you cancel the `<ESC>` with a `-X`.
 
 ## HTML
 `HC` - html

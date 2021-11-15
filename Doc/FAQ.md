@@ -42,8 +42,8 @@ TempleOS uses a dialect of C/C++ called [HolyC](./HolyC.md). It is not Pascal. I
 ## What is JIT Compiled Mode?
 The term [JIT Compile Mode](./Glossary.md) means it compiles and executes code placed into mem, not stored on disk.
 
-## Why do files end in .Z? Are they encrypted?
-Files with names ending in .Z are individually compressed using [TempleOS Compression](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Kernel/Compress.HC). They are not encrypted. `Copy()` or rename them with `Move()` to a name without .Z and they will be stored in an uncompressed form. See [TOSZ](./TOSZ.md) for Linux or Windows uncompress C/C++ code.
+## Why do files end in `.Z`? Are they encrypted?
+Files with names ending in `.Z` are individually compressed using [TempleOS Compression](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Kernel/Compress.HC). They are not encrypted. `Copy()` or rename them with `Move()` to a name without `.Z` and they will be stored in an uncompressed form. See [TOSZ](./TOSZ.md) for Linux or Windows uncompress C/C++ code.
 
 ## Is it open source? How do I build it?
 TempleOS is 100% open src. All the src code is included in the distro. Use `BootHDIns()` to compile the kernel and compiler. The rest is [JIT Compiled](./Glossary.md) during boot. See `/StartOS.HC`. 
@@ -124,10 +124,10 @@ Binary sprite data is stored beyond the terminating NULL in text files. Map file
 Sprites can be stored as vector graphics so they might take shockingly little room. They can be converted to bitmaps.
 
 ## Why don't I need to recompile `/Adam` and `/Home` files?
-If you change code in the `/Adam` or your `/Home` directory, you don't need to recompile, you just need to reboot because those directories get recompiled when you boot. It uses [JIT Compile Mode](./Glossary.md). There is no .BIN file for JIT compilation. See `/StartOS.HC`.
+If you change code in the `/Adam` or your `/Home` directory, you don't need to recompile, you just need to reboot because those directories get recompiled when you boot. It uses [JIT Compile Mode](./Glossary.md). There is no `.BIN` file for JIT compilation. See `/StartOS.HC`.
 
 ## Why does it finds files that aren't there?
-If not found, .Z is added or removed from filename and a search is done again. If a file is still not found, the parent directories are searched for a file of the same name.
+If not found, `.Z` is added or removed from filename and a search is done again. If a file is still not found, the parent directories are searched for a file of the same name.
 
 ## Credits
   - _Windows_ is a trademark owned by MicroSoft Corp.
