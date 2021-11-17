@@ -20,7 +20,7 @@ You can use `AdamLog()` to send text to the [Adam Task](./Glossary.md) window. I
 
 `ClassRep()` and the dynamic version `ClassRepD()` can be used to dump structures.
 
-`Prof()` and `ProfRep()` provide code profiling. See [InProfile.IN](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/InFile/InProfile.IN) (This is an [InFile](./Doc/Glossary.md))
+`Prof()` and `ProfRep()` provide code profiling. See [InProfile.IN](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/InFile/InProfile.IN) (This is an [InFile](./Glossary.md))
 
 Use `RawPrint()` to print debug info bypassing the window framework. You pass these routines a count in milliseconds for how long it should be displayed. You can use `Raw(TRUE)` to make all output bypass the window framework. The WinMgr runs on Core0 and will overwrite raw text from other cores when it updates the scrn.
 

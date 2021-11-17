@@ -25,7 +25,7 @@ If you have not recompiled Kernel and defined your CD/DVD drive, exit the FileMg
 
 ## Instructions on Burning CD/DVD's
 Create a temporary dir to hold files and copy files into the holding dir. Make an ISO image of the dir by pressing `M` when on top of the dir. Press `B` when on top of the CD/DVD ROM drive to burn the ISO, `/Tmp/CDDVD.ISO`[^1] `blkdev.dft_iso_filename`[^2], to disk. If you have not recompiled Kernel and defined your CD/DVD drive, exit the FileMgr and use `Mount`.
-See [Making Your Own Distro](./Misc/DoDistro.HC)
+See [Making Your Own Distro](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Misc/DoDistro.HC)
 
 [^1]: See D:DFT_ISO_C_FILENAME
 

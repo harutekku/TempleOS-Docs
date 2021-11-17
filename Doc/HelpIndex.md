@@ -147,7 +147,7 @@ You recompile the kernel with `BootHDIns()`, and specify which drives should be 
   - Misc[^38]
   - Mouse[^39]
   - MultiCore[^40]
-  - [OpCodes](./Compiler/OpCodes.md)
+  - [OpCodes](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Compiler/OpCodes.DD)
   - [Operator Precedences](./HolyC.md)
   - PCI[^41]
   - [Print("") Format Strings](./Print.md)

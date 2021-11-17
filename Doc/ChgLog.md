@@ -416,7 +416,7 @@ Use `R()` to rename if I change a label.
   - `<CTRL-ALT-n>` is next task.
 
 ## 06/16/16 19:49:39
-  - Added [Comm.HC](./Comm.HC).
+  - Added [Comm.HC](./Comm.hc).
   - Added [StdTempleOSPC.DD](StdTempleOSPC.md).
   - Added [FontCyrillic.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Kernel/FontCyrillic.HC). `<CTRL-ALT-f>`
 
