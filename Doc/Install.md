@@ -10,7 +10,7 @@ See [Boot](./Boot.md) for an overview of booting. See [Requirements](./Requireme
 Two TempleOS partitions are highly recommended, so you can boot to a back-up and fix the primary when you work on it. Odds are, you only need a couple gigabytes for your TempleOS partitions.
 
 ## `Mount()`
-Use if the drive is partitioned. This command mounts a drive making it accessible. For simplicity, sel 'C' as the first drive letter for your hard drive. The first partition will be 'C', second, 'D', etc. TempleOS needs 3 numbers to utilize a hard drive -- base0, base1, and unit. When you enter a hexadecimal number, do it like in C with a 0x prefix. If the probe was successful, you can just enter the number in the probe box instead of base0.
+Use if the drive is partitioned. This command mounts a drive making it accessible. For simplicity, sel 'C' as the first drive letter for your hard drive. The first partition will be 'C', second, 'D', etc. TempleOS needs 3 numbers to utilize a hard drive -- base0, base1, and unit. When you enter a hexadecimal number, do it like in C with a `0x` prefix. If the probe was successful, you can just enter the number in the probe box instead of base0.
 
 ```holyc
 DskPrt('C')  // use if drive is not partitioned

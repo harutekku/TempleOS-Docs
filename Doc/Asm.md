@@ -44,6 +44,6 @@ Align to _num_ boundary and fill with `fill_byte`.
 ## `ORG` _num_
 Set code addr for JIT or set module `Load()` addr -- has 16-byte `CBinFile`[^1] header and patch table trailing.
 
-See [assembly language](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Doc/GuideLines.DD) and [demo 1](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Asm/AsmAndC1.HC), [demo 2](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Asm/AsmAndC2.HC) and [demo 3](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Asm/AsmAndC3.HC).
+See [assembly language](./GuideLines.md) and [demo 1](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Asm/AsmAndC1.HC), [demo 2](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Asm/AsmAndC2.HC) and [demo 3](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/Asm/AsmAndC3.HC).
 
 [^1]: See MN:CBinFile

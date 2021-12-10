@@ -46,7 +46,7 @@ You can place macros in your [PersonalMenu.DD](https://github.com/cia-foundation
 Find("needle", "/Demo/*.HC.Z;*.DD.Z;")  // See File Utils in ./FileUtils.md.
 ```
 
-Cmd Line Routines[^3]
+Cmd Line Routines[^2]
 
 [^1]: See MN:Dir
 

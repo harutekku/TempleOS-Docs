@@ -172,13 +172,13 @@ This is Adam, as in Adam and Eve, the parent of all tasks. Adam is immortal. The
 In the Bible, Seth is Adam and Eve's child. Each CPU core has an executive task called Seth that is immortal. The Adam task on Core0 is also its Seth task.
 
 ## Code and Data Heaps
-TempleOS uses the asm CALL inst, exclusively, and that inst is limited to calling routines +/-2Gig from the current code location. To prevent out-of-range issues, I decided to separate code and data, placing all code within the lowest 2Gig of memory, addresses 00000000 - 7FFFFFFF.  The compiler and `Load()`er alloc memory from the code heap to store code and glbl vars, unless the compiler option `OPTf_GLBLS_ON_DATA_HEAP`[^3] is used. When programs call `MAlloc()` is from the data heap, which in not limited in size, except by physical RAM memory. You can alloc from any heap in any task at any time on any core, even making independent[^4] heaps.
+TempleOS uses the asm CALL inst, exclusively, and that inst is limited to calling routines +/-2Gig from the current code location. To prevent out-of-range issues, I decided to separate code and data, placing all code within the lowest 2Gig of memory, addresses `0x00000000 - 0x7FFFFFFF`.  The compiler and `Load()`er alloc memory from the code heap to store code and glbl vars, unless the compiler option `OPTf_GLBLS_ON_DATA_HEAP`[^3] is used. When programs call `MAlloc()` is from the data heap, which in not limited in size, except by physical RAM memory. You can alloc from any heap in any task at any time on any core, even making independent[^4] heaps.
 
 ## Parent, Child and PopUp Tasks
 Often a task will `Spawn()` or `PopUp()` a task as a helper. The helper is known as a child Task, though you can `Spawn` a task and assign it a different parent... like Adam. Links are kept as to who's whose child, so when one task is `Kill()`ed the child helper tasks die, too. You can get a report of current system tasks with `TaskRep()`. There is just one window per task, so child tasks are needed for pop-ups.
 
 ## HolyC
-[HolyC](./HolyC.md) is more than C and less than C++. It has the default args of C++ and uses class in place of struct. It uses U0,U8,U16,U32,I64 and I0,I8,I16,I32,I64 for signed and unsigned ints. It has different [operator precedence](./HolyC.md). It has PASCAL-like function calls with no parens, but requires an & when referring to function addresses.
+[HolyC](./HolyC.md) is more than C and less than C++. It has the default args of C++ and uses class in place of struct. It uses `U0`, `U8`, `U16`, `U32`, `I64` and `I0`, `I8`, `I16`, `I32`, `I64` for signed and unsigned ints. It has different [operator precedence](./HolyC.md). It has PASCAL-like function calls with no parens, but requires an & when referring to function addresses.
 
 ## AOT Compile Mode
 Ahead-of-Time compiling is conventional compilation mode. Do not use AOT, use JIT compiling.
@@ -277,10 +277,10 @@ res is reserved for local variables that hold the function return val.
 I used C++ like naming. I place New, Del, Init, Rst, ect. on the end of a function name instead of at the beginning. RstMusicSettings should be MusicSettingsRst.
 
 ## Fs
-The CPU FS segment reg. This reg points to the current task's `CTask`[^1].
+The CPU `FS` segment reg. This reg points to the current task's `CTask`[^1].
 
 ## Gs
-The CPU GS segment reg. This reg points to the current core's `CCPU`[^12].
+The CPU `GS` segment reg. This reg points to the current core's `CCPU`[^12].
 
 ## Heap
 Programs can dynamically request chunks of memory alloced from a heap using `MAlloc()`. They must `Free()` it when finished. Ptrs are used to refer to the chunk. The heap is dynamically alloced mem.

@@ -37,7 +37,7 @@ Since I don't use paging (for anything), Intel should have an option for no-pagi
 
 Desktop computers must have a reset switch and a fast reboot option, skipping diagnostics. I recommend booting TempleOS from a ROM when the reset bttn is pressed and booting UEFI when the power bttn is pressed. Or, we could build UEFI on a TempleOS layer. Intel must burn TempleOS into a ROM in the factory for all desktop x86 CPUs to ensure tamper-proof trust in the oracle and because God deserves the glory. There will be just an English version. A new ROM version is released every seven years. The ROM should boot like the DVD boots, but with `BOOT_SRC_ROM`.
 
-We do not want UTF, just 8-bit characters. `<CTRL-ALT-f>` toggles between Cyrillic and Std Fonts. We need the twelve window `TextBorder`[1^] characters added to the VGA font 0x02-0x0D. Japan, China and Korea must switch to alphabets. Maybe, the United States will change to metric, out of good will. I am beginning to plan fresh ASCII replacement, [New ASCII](./NewASCII.md).
+We do not want UTF, just 8-bit characters. `<CTRL-ALT-f>` toggles between Cyrillic and Std Fonts. We need the twelve window `TextBorder`[1^] characters added to the VGA font `0x02 - 0x0D`. Japan, China and Korea must switch to alphabets. Maybe, the United States will change to metric, out of good will. I am beginning to plan fresh ASCII replacement, [New ASCII](./NewASCII.md).
 
 Microsoft Paint and Linux's Gimp must support TempleOS [GR Files](./GRFiles.md). They are blemish free, unlike [BMP files](http://en.wikipedia.org/wiki/BMP_file_format). The TOSZ Linux utility can be used to make screencasts from TempleOS exported [GR Files](./GRFiles.md) and AU Files.
 

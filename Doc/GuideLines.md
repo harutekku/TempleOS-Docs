@@ -41,7 +41,7 @@ Place applications in their own `/Apps` subdirectory.
 
 Make a file called `Load.HC.Z` to load the application.
 
-Make a file called `Run.HC.Z` to load and run the application, preferable by #includeing the `Load.HC.Z` file.
+Make a file called `Run.HC.Z` to load and run the application, preferable by `#include`ing the `Load.HC.Z` file.
 
 Place user data in a subdirectory of `/Home`, preferably naming the subdirectory the same as the `/Apps` subdirectory. Or, place data in the `Registry.HC.Z` file. See [RegistryDemo.HC](https://github.com/cia-foundation/TempleOS/blob/c26482bb6ad3f80106d28504ec5db3c6a360732c/Demo/RegistryDemo.HC).
 
@@ -77,7 +77,7 @@ Avoid boolean expression assignments. Boolean assignments don't have short circu
 
 Glbl vars in AOT BIN modules are initialized to zero. They occupy space in `.BIN` files.
 
-Bracketing code with PUSHFD CLI and POPFD will protect against simultaneous accesses from tasks on *one* core. To protect against multiple cores, you need a locked semaphore. I think semiphores need to be in their own cache line, but I'm not sure. I use lock bits in a lot of places not aligned.
+Bracketing code with `PUSHFD CLI` and `POPFD` will protect against simultaneous accesses from tasks on *one* core. To protect against multiple cores, you need a locked semaphore. I think semiphores need to be in their own cache line, but I'm not sure. I use lock bits in a lot of places not aligned.
 
 `SysDbg()` and `IsSysDbg()` are really handy when working on the compiler or kernel. It's just a bit you can set and test.
 
@@ -101,13 +101,13 @@ To display the contents of a hash table, use the `Who()` routine or the varients
 
 See [Asm](./Asm.md).
 
-FS must always point to the cur `CTask`[^3].
+`FS` must always point to the cur `CTask`[^3].
 
-GS must always point to the cur `CCPU`[^4].
+`GS` must always point to the cur `CCPU`[^4].
 
 Don't change the segment regs unless interrupts are off. It's hard to do, anyway. `SET_FS_BASE`[^5] and `SET_GS_BASE`[^6].
 
-When interacting with [HolyC](./HolyC.md) compiled code, preserve RBP, RSI, RDI, R10-R15 because the compiler uses these for reg vars. You are free to clobber RAX, RBX, RCX, RDX, R8 and R9. See Compiler Reg Masks[^7], `PUSH_C_REGS`[^8] and `POP_C_REGS`[^9].
+When interacting with [HolyC](./HolyC.md) compiled code, preserve `RBP`, `RSI`, `RDI`, `R10-R15` because the compiler uses these for `reg` vars. You are free to clobber `RAX`, `RBX`, `RCX`, `RDX`, `R8` and `R9`. See Compiler Reg Masks[^7], `PUSH_C_REGS`[^8] and `POP_C_REGS`[^9].
 
 I recommend using the standard stk frame for functions because `Caller()` is used to display the call stk, such as for the wallpaper.
 ```holyc
@@ -119,13 +119,13 @@ LEAVE
 RET
 ```
 
-The args are removed from the stack with RET1 stmts.
+The args are removed from the stack with `RET1` stmts.
 ```holyc
 RET1	16	//remove two args
 ```
 No args are passed in regs.
 
-RAX holds function return values, of course.
+`RAX` holds function return values, of course.
 
 ## Credits
   - _MagicISO_ is a trademark owned by MagicISO Corp.

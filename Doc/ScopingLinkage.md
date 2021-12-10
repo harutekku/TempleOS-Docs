@@ -111,7 +111,7 @@ The `sizeof()` and HolyC structure members can be used in asm blks.
 
 Using `&i` in [HolyC](./HolyC.md) or `i.u8[2]` on a local var, `i`, will force it to `noreg`.
 
-Using `try`/`catch` in a function will force all local vars to `noreg`.
+Using `try`-`catch` in a function will force all local vars to `noreg`.
 
 An unused gap on the stk is left for reg vars.
 
