@@ -2,7 +2,7 @@
 
 You run a risk of problems if you do file operations on the same files simultaneously because there is no file sharing/locking mechanism. Generally, the last write wins.
 
-When using FAT32, TempleOS does not generate unique short-entry names, the ones with the `~s`. Not all FAT32 filenames are valid TempleOS names and it will complain. Do not access FAT32 drives not dedicated to TempleOS. Disable them with `DrvEnable(OFF)`, or they will generate error messages. FAT32 involves a long and short name for each file.
+When using FAT32, TempleOS does not generate unique short-entry names, the ones with the `~`s. Not all FAT32 filenames are valid TempleOS names and it will complain. Do not access FAT32 drives not dedicated to TempleOS. Disable them with `DrvEnable(OFF)`, or they will generate error messages. FAT32 involves a long and short name for each file.
 
 The stk does not grow because virtual mem is not used. I recommend allocating large local vars from the heap. You can change `MEM_DFT_STK`[^1] and recompile Kernel or request more when doing a `Spawn()`.
 

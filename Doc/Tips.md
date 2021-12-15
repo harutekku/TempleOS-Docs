@@ -143,7 +143,7 @@ You can use `<CTRL-SHIFT-L>` to do a check for compile errors.
 
 You can use `DocOpt()` to optimize links. (Mostly just removes `.Z`)
 
-`ZipRep"$()` can highlight src files with lots of redundancy.
+`ZipRep()` can highlight src files with lots of redundancy.
 
 With start/end, common trailing code is fast. Common leading code is slow.
 
