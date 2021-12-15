@@ -34,7 +34,7 @@ This command recompiles the source code on a drive and writes to the *drive's* b
 
 ## Use Linux's Grub or TempleOS - `BootMHDIns('D')`
 
-The `BootMHDIns()` command places a boot loader on a drive. It saves the old master boot record to /0000Boot/OldMBR.BIN.C and replaces it. When you boot, you will have the option of booting the old master boot record. This command can be skipped if you already have a boot loader. Be sure not to lose the copy of the old boot record, like if you reformat the drive.
+The `BootMHDIns()` command places a boot loader on a drive. It saves the old master boot record to `/0000Boot/OldMBR.BIN.C` and replaces it. When you boot, you will have the option of booting the old master boot record. This command can be skipped if you already have a boot loader. Be sure not to lose the copy of the old boot record, like if you reformat the drive.
 
 Delete `/0000Boot/OldMBR.BIN.C` if you want to get a fresh copy of a mbr, like if installing from your own custom CD containing it's own `/0000Boot/OldMBR.BIN.C` onto a system with a non-TempleOS boot loader.
 
